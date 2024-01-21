@@ -13,7 +13,7 @@
 import java.time.LocalTime;
 import java.util.Scanner;
 
-public class main_program {
+public class Task_1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
