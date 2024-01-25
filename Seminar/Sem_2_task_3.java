@@ -13,7 +13,7 @@ public class Sem_2_task_3 {
         String str = "А роза упала на лапу Азора";
 
         System.out.println(polindrom (str));
-        
+        System.out.println(polindrom2 (str));
 
     }
 
@@ -30,5 +30,16 @@ public class Sem_2_task_3 {
         }
 
         return true;
+    }
+
+    public static boolean polindrom2 (String s){
+
+        s = s.toLowerCase();
+        s = s.replace(" ", "");
+
+        StringBuilder sb = new StringBuilder();
+        sb.reverse();
+
+        return sb.toString().equals(s);
     }
 }   
