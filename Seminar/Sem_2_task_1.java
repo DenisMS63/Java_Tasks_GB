@@ -9,7 +9,7 @@ package Seminar;
 
 import java.util.Scanner;
 
-public class Sem_1_task_1 {
+public class Sem_2_task_1 {
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);

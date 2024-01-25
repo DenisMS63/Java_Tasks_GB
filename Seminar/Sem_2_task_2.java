@@ -6,7 +6,7 @@
 
  package Seminar;
 
-public class Sem_1_task_2 {
+public class Sem_2_task_2 {
     
     public static void main(String[] args) {
         
