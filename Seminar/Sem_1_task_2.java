@@ -4,15 +4,52 @@
 Пример: вход aaaabbbcdd.
  */
 
-
+ package Seminar;
 
 public class Sem_1_task_2 {
     
-    String str = "aaaabbbcdd";
+    public static void main(String[] args) {
+        
+        String str = "aaaabbbcdd";
 
-    
+        System.out.println("Сжатая строка: " + CompressStr(str));
+        
+    }
+
+    static String CompressStr(String s) {
+
+        StringBuilder sb = new StringBuilder();
+        int count = 1;
+        int lenStr = s.length();
+        
+        for (int i = 1; i < lenStr; i++) {
+            
+            if (s.charAt(i) == s.charAt(i - 1)) {
+
+                count++;
+
+            } else {
+
+                sb.append(s.charAt(i - 1));
+
+                if (count > 1) {
+                    sb.append(count);
+                }
+                count = 1;
+            }
+        }
+
+        sb.append(s.charAt(lenStr - 1));
+        if (count > 1) {
+            sb.append(count);
+        }
+
+        return sb.toString();
+    }
 
 }
+
+
 
 
 // static void CompressStr(String s) {
