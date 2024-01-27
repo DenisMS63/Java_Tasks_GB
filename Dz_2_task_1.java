@@ -27,11 +27,12 @@ public class Dz_2_task_1 {
     public static void main(String[] args) {
         
         String QUERY = "select * from students where ";
-	    String PARAMS = "{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"}";
+	    String PARAMS = "{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"} ";
         
         String newPARAMS = PARAMS.replace("\"", "");
         newPARAMS = newPARAMS.replace("{", "");
         newPARAMS = newPARAMS.replace("}", "");
+        newPARAMS = newPARAMS.trim();
         System.out.println();
         System.out.println(newPARAMS);
 
@@ -102,16 +103,6 @@ public class Dz_2_task_1 {
 
     } 
 
-    public static StringBuilder answer(String QUERY, String PARAMS){
-       
-        String [] arrPARAMS = PARAMS.split(",");
-        
-        String QUERY1 = "select * from students where ";
-       if (QUERY1.compareTo(QUERY) == 0){
-            System.out.println(111);
-       }
-
-       return null;
-    }
+    
 
 }
